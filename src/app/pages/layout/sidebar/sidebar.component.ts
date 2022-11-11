@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { MENU_ITEMS } from './sidebar.menu';
 
+interface User {
+  name : string;
+}
+
 @Component({
   selector: 'app-sidebar',
   templateUrl: './sidebar.component.html',
@@ -8,11 +12,13 @@ import { MENU_ITEMS } from './sidebar.menu';
 })
 export class SidebarComponent implements OnInit {
 
+  user    : User;
   priv_id : string;
 
   menus = MENU_ITEMS;
 
   constructor() {
+    this.user = { name: 'tolriaz', }
     this.priv_id = this.menus[0].title;
   }
 
