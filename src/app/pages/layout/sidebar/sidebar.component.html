@@ -1,15 +1,10 @@
-<p>sidebar works!</p>
 <nav class="sidebar">
     <ul class="nav">
-        <li class="nav-item nav-profile">
-          <a class="nav-link" (click)="clickedMenu($event)" routerLink="/">
-            <div class="profile-image">
-              <img class="img-xs rounded-circle" src="assets/images/faces/face8.jpg" alt="profile image">
-              <div class="dot-indicator bg-success"></div>
-            </div>
+        <li *ngFor="let menu of menus;" class="nav-item">
+          <a class="nav-link" (click)="clickedMenu($event)" routerLink="{{ menu.link }}">
+            <img class="nav-icon" src="{{ menu.icon }}">
             <div class="text-wrapper">
-              <p class="profile-name">Allen Moreno</p>
-              <p class="designation">Premium user</p>
+              {{ menu.title }}
             </div>
           </a>
         </li>
