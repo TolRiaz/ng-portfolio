@@ -8,32 +8,28 @@ import { MENU_ITEMS } from './sidebar.menu';
 })
 export class SidebarComponent implements OnInit {
 
-  id : string;
+  priv_id : string;
+
   menus = MENU_ITEMS;
 
   constructor() {
-    this.id = this.menus[0].title;
+    this.priv_id = this.menus[0].title;
   }
 
   ngOnInit(): void {
-    console.log(this.menus, this.id);
   }
 
-  public parentId = "";
   clickedMenu( event: any ) {
     var target = event.currentTarget;
-    console.log('tt', target);
+    let id     = target.id;
 
-    let parentId = target.id;
+    console.log( this.priv_id, '=>', id )
 
-    if (parentId == this.parentId) {
-      console.log('parent', parentId);
-      console.log('target', target.id);
+    if (id == this.priv_id) {
       console.log('same');
-      this.parentId = "";
     } else {
       console.log('not same');
-      this.parentId = target.id;
+      this.priv_id = target.id;
     }
   }
 
