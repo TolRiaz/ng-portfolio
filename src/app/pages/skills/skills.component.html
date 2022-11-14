@@ -1,30 +1,9 @@
-<div>
-    <h2>Cloud</h2>
-    <p>lxd</p> 80%
-    <p>kubernetes</p> 70%
-    <p>Desktop as a Service</p> 80%
-</div>
-
-<div>
-    <h2>AI</h2>
-    <p>darknet - yolo</p> 90%
-    <p>stable-diffusion</p> 60%
-</div>
-
-<div>
-    <h2>Backend</h2>
-    <p>go</p> 80%
-    <p>python</p> 80%
-</div>
-
-<div>
-    <h2>Frontend</h2>
-    <p>reactJS</p> 60%
-    <p>angular</p> 70%
-</div>
-
-<div>
-    <h2>Skills</h2>
-    <p>API server</p>
-    <p>grpc</p>
-</div>
+<app-accordion>
+    <app-accordion-item *ngFor="let item of items">
+        <app-accordion-item-header>{{ item.section }}</app-accordion-item-header>
+        <app-accordion-item-body *ngFor="let body of item.info">
+            <app-accordion-item-body-title>{{ body.name }}</app-accordion-item-body-title>
+            <app-accordion-item-body-description>{{ body.percentage }}</app-accordion-item-body-description>
+        </app-accordion-item-body>
+    </app-accordion-item>
+</app-accordion>

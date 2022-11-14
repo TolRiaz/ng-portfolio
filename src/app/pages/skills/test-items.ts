@@ -1,23 +1,63 @@
+export interface ACCORDION_ITEM_INFO {
+    name : string,
+    percentage?: number,
+}
 export interface ACCORDION_ITEM {
-    title : string,
-    header: string,
-    body  : string,
+    section : string,
+    info : Array<ACCORDION_ITEM_INFO>
 }
 
 export const ACCORDION_ITEMS: Array<ACCORDION_ITEM> = [
     {
-        "title": "test1",
-        "header": "test-header1",
-        "body": "test-body1"
+        "section": "Cloud",
+        "info": [{
+            "name": "LxD",
+            "percentage": 80
+        },
+        {
+            "name": "Kubernetes",
+            "percentage": 70
+        },
+        {
+            "name": "Desktop as a Service",
+            "percentage": 80
+        }]
     },
     {
-        "title": "test2",
-        "header": "test-header2",
-        "body": "test-body2"
+        "section": "AI",
+        "info": [{
+            "name": "Darknet - Yolo",
+            "percentage": 90
+        },
+        {
+            "name": "Stable-Diffusion",
+            "percentage": 60
+        }]
     },
     {
-        "title": "test3",
-        "header": "test-header3",
-        "body": "test-body3"
+        "section": "Backend",
+        "info": [{
+            "name": "Go-lang",
+            "percentage": 80
+        },
+        {
+            "name": "Python",
+            "percentage": 80
+        }] 
+    },
+    {
+        "section": "Frontend",
+        "info": [{
+            "name": "React",
+            "percentage": 60
+        },
+        {
+            "name": "Angular",
+            "percentage": 70
+        }]
+    },
+    {
+        "section": "Skills",
+        "info": [{ "name": "API server" }, { "name": "grpc" }]
     }
 ]
