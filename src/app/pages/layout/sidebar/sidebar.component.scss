@@ -7,6 +7,7 @@
   font-family: $type-1;
   width: $sidebar-width-lg;
   min-height: calc(100vh - #{$navbar-height});
+  height: 100%;
   padding: 0;
   transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
   -webkit-transition: width $action-transition-duration $action-transition-timing-function, background $action-transition-duration $action-transition-timing-function;
@@ -17,11 +18,15 @@
 .sidebar .profile {
   text-align: center;
   text-align: -webkit-center;
-  border: 1px black solid;
   border-radius: 100%;
-  background-color: $sidebar-profile-name-color;
+  background-color: $sidebar-light-bg;
   width: calc(#{$sidebar-width-lg} - 2rem );
   height: calc(#{$sidebar-width-lg} - 2rem );
+
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(5.8px);
+
 }
 
 .sidebar .profile > img {
@@ -31,6 +36,7 @@
 }
 
 .sidebar .profile-username {
+  margin-top: .5rem;
   font-size: 2rem;
 }
 
