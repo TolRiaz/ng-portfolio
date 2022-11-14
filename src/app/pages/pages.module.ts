@@ -5,7 +5,6 @@ import { PagesRoutingModule } from './pages-routing.module';
 import { PagesComponent } from './pages.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { SkillsComponent } from './skills/skills.component';
-import { AccordionModule } from 'src/assets/component/accordion/accordion.module';
 
 
 @NgModule({
@@ -17,7 +16,6 @@ import { AccordionModule } from 'src/assets/component/accordion/accordion.module
   imports: [
     CommonModule,
     PagesRoutingModule,
-    AccordionModule,
   ]
 })
 export class PagesModule { }
