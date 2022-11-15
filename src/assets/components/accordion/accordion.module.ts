@@ -6,6 +6,7 @@ import { AccordionItemHeaderComponent } from './accordion-item/accordion-item-he
 import { AccordionItemBodyComponent } from './accordion-item/accordion-item-body/accordion-item-body.component';
 import { AccordionItemBodyTitleComponent } from './accordion-item/accordion-item-body/accordion-item-body-title/accordion-item-body-title.component';
 import { AccordionItemBodyDescriptionComponent } from './accordion-item/accordion-item-body/accordion-item-body-description/accordion-item-body-description.component';
+import { IconModule } from '../icon/icon.module';
 
 const ACCORDION_IMPORTS = [
   AccordionComponent,
@@ -18,7 +19,7 @@ const ACCORDION_IMPORTS = [
 
 @NgModule({
   declarations: ACCORDION_IMPORTS,
-  imports: [ CommonModule ],
+  imports: [ CommonModule, IconModule ],
   exports: ACCORDION_IMPORTS,
 })
 export class AccordionModule { }

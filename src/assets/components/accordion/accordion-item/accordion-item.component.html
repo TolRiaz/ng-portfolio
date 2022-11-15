@@ -1,3 +1,7 @@
 <!-- <p>accordion-item works!</p> -->
+
 <ng-content select="app-accordion-item-header"></ng-content>
-<ng-content select="app-accordion-item-body"></ng-content>
+
+<div class="accordion-item-body-wrapper">
+    <ng-content select="app-accordion-item-body"></ng-content>
+</div>

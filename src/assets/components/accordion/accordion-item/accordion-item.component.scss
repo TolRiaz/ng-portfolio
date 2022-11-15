@@ -1,2 +1,14 @@
 @import '/src/styles';
 
+.accordion-item-header {
+    padding: 1rem;
+    border: black solid 1px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.accordion-item-body-wrapper {
+    border: black solid 1px;
+    margin-bottom: .5rem;
+}
