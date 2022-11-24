@@ -15,7 +15,7 @@ export class IconComponent implements OnInit {
    * Icon name
    * @param {string} status
    */
-   @Input() icon: string;
+  @Input() icon: string;
 
   constructor() {
     this.icon = ""

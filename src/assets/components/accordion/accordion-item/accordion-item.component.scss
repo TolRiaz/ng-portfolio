@@ -8,7 +8,17 @@
     justify-content: space-between;
 }
 
+.accordion-item-header-expanded .accordion-item-header > app-icon img {
+    transform: rotate(180deg);
+    transition: 200ms ease-in;
+}
+
+.accordion-item-header-collapsed .accordion-item-header > app-icon img {
+    transition: 200ms ease-out;
+}
+
 .accordion-item-body-wrapper {
+    padding: 1rem;
     border: black solid 1px;
     margin-bottom: .5rem;
 }
