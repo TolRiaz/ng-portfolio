@@ -1,9 +1,19 @@
-<app-accordion>
-    <app-accordion-item *ngFor="let item of items">
-        <app-accordion-item-header>{{ item.section }}</app-accordion-item-header>
-        <app-accordion-item-body *ngFor="let body of item.info">
-            <app-accordion-item-body-title>{{ body.name }}</app-accordion-item-body-title>
-            <app-accordion-item-body-description>{{ body.percentage }}</app-accordion-item-body-description>
-        </app-accordion-item-body>
-    </app-accordion-item>
-</app-accordion>
+<div class="skills-component">
+
+    <div>
+        <h1>Skills & Experience!</h1>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. At maiores nesciunt esse voluptates eveniet ducimus cupiditate, obcaecati eaque cumque voluptatum veniam et odio eum, in odit soluta tempora officia harum.
+        </p>
+    </div>
+
+    <app-accordion>
+        <app-accordion-item *ngFor="let item of items">
+            <app-accordion-item-header>{{ item.section }}</app-accordion-item-header>
+            <app-accordion-item-body *ngFor="let body of item.info">
+                <app-accordion-item-body-title>{{ body.name }}</app-accordion-item-body-title>
+                <app-accordion-item-body-description>{{ body.percentage }}</app-accordion-item-body-description>
+            </app-accordion-item-body>
+        </app-accordion-item>
+    </app-accordion>
+</div>

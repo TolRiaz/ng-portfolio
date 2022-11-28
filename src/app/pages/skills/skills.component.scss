@@ -1,0 +1,12 @@
+.skills-component {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+}
+
+app-accordion, .skills-component > div {
+    width: 45%;
+    min-width: 500px;
+    margin: 1% 2%;
+}
