@@ -2,6 +2,6 @@
 
 <ng-content select="app-accordion-item-header"></ng-content>
 
-<div class="accordion-item-body-wrapper" style="display: {{ bodyDisplay }};">
+<div [class]="bodyClass">
     <ng-content select="app-accordion-item-body"></ng-content>
 </div>

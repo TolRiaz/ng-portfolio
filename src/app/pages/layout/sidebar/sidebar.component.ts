@@ -32,9 +32,9 @@ export class SidebarComponent implements OnInit {
     console.log( this.priv_id, '=>', id )
 
     if (id == this.priv_id) {
-      console.log('same');
+      // console.log('same');
     } else {
-      console.log('not same');
+      // console.log('not same');
       this.priv_id = target.id;
     }
   }

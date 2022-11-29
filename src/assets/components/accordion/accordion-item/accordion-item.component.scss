@@ -17,16 +17,18 @@
     transition: 250ms ease-out;
 }
 
-.accordion-item-body-wrapper {
+.accordion-item-body-wrapper-expanded, .accordion-item-body-wrapper-collapsed {
     padding: 1rem;
     border: black solid 1px;
     margin-bottom: .5rem;
 }
 
 .accordion-item-body-wrapper-expanded {
+    display: block;
 }
 
 .accordion-item-body-wrapper-collapsed {
+    display: none;
 }
 
 @keyframes accordion-open {

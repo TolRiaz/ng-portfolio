@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewEncapsulation, Input, HostBinding, OnChanges, OnDestroy, SimpleChanges, Host, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
-import { HiddenProps } from '@material-ui/core';
 import { Subject, takeUntil } from 'rxjs';
 import { AccordionComponent } from '../accordion.component';
+
+const CLASS_NAME = "accordion-item-body-wrapper"
 
 @Component({
   selector: 'app-accordion-item',
@@ -47,12 +48,12 @@ export class AccordionItemComponent implements OnInit, OnChanges, OnDestroy {
    /**
     * Hide item or not
     */
-   @Input('bodyDisplay')
-   get bodyDisplay(): string {
+   @Input('bodyClass')
+   get bodyClass(): string {
       if (this.collapsedValue) {
-        return "none"
+        return CLASS_NAME + "-collapsed"
       } else {
-        return "block"
+        return CLASS_NAME + "-expanded"
       }
    }
 
