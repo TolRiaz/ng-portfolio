@@ -1,7 +1,7 @@
 <nav class="sidebar">
     <ul class="nav">
         <li class="nav-item home">
-          <a id="Home" class="nav-link home" (click)="clickedMenu($event)" routerLink="/dashboard">
+          <a id="Home" class="nav-link" routerLink="/dashboard">
 
             <div class="profile">
               <img src="assets/img/my-profile.png">
@@ -13,8 +13,8 @@
           </a>
         </li>
 
-        <li *ngFor="let menu of menus;" class="nav-item">
-          <a id="{{ menu.title }}" class="nav-link" (click)="clickedMenu($event)" routerLink="{{ menu.link }}">
+        <li *ngFor="let menu of menus;" class="nav-item menu">
+          <a id="{{ menu.title }}" class="nav-link" routerLink="{{ menu.link }}" routerLinkActive="nav-item-active">
             <img class="nav-icon" src="{{ menu.icon }}">
             <div class="text-wrapper">
               {{ menu.title }}

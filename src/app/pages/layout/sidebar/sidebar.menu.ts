@@ -15,4 +15,19 @@ export const MENU_ITEMS: Array<MENU_ITEM> = [
       icon: 'assets/img/about.svg',
       link: '/pages/skills',
     },
+    {
+      title: 'Work',
+      icon: 'assets/img/about.svg',
+      link: '/pages/work',
+    },
+    {
+      title: 'Contact',
+      icon: 'assets/img/about.svg',
+      link: '/pages/contact',
+    },
+    {
+      title: 'Blog',
+      icon: 'assets/img/about.svg',
+      link: '/pages/blog',
+    },
 ]

@@ -12,31 +12,14 @@ interface User {
 })
 export class SidebarComponent implements OnInit {
 
-  user    : User;
-  priv_id : string;
+  user : User;
 
   menus = MENU_ITEMS;
 
   constructor() {
     this.user = { name: 'tolriaz', }
-    this.priv_id = this.menus[0].title;
   }
 
   ngOnInit(): void {
   }
-
-  clickedMenu( event: any ) {
-    var target = event.currentTarget;
-    let id     = target.id;
-
-    console.log( this.priv_id, '=>', id )
-
-    if (id == this.priv_id) {
-      // console.log('same');
-    } else {
-      // console.log('not same');
-      this.priv_id = target.id;
-    }
-  }
-
 }

@@ -19,7 +19,7 @@
   text-align: center;
   text-align: -webkit-center;
   border-radius: 100%;
-  background-color: $sidebar-light-bg;
+  background-color: $sidebar-light-profile-bg;
   width: calc(#{$sidebar-width-lg} - 2rem );
   height: calc(#{$sidebar-width-lg} - 2rem );
 
@@ -58,16 +58,38 @@
   padding-top: 1rem;
 }
 
+.sidebar .nav-item.menu:hover {
+  background: $sidebar-light-menu-hover-bg;
+}
+
+.sidebar .nav-item-active {
+  background: $sidebar-light-menu-active-bg;
+}
+
+.sidebar .nav-item-active:hover {
+  color: $sidebar-light-menu-active-color !important;
+}
+
 .sidebar .nav-link {
-  margin-left: 1rem;
   display: flex;
   align-items: center;
   text-decoration: none;
+  color: $sidebar-light-menu-color;
 }
 
-.sidebar .nav-link.home {
+.sidebar .nav-item.home .nav-link {
   margin-left: 0;
   flex-direction: column;
+  font-weight: bold;
+  color: $sidebar-profile-name-color;
+}
+
+.sidebar .nav-item.menu .nav-link {
+  padding-left: 1rem;
+}
+
+.sidebar .nav-item.menu .nav-link:hover {
+  color: $sidebar-light-menu-hover-color;
 }
 
 .sidebar .text-wrapper {

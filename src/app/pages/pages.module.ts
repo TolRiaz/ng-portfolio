@@ -6,13 +6,19 @@ import { PagesComponent } from './pages.component';
 import { SidebarComponent } from './layout/sidebar/sidebar.component';
 import { SkillsComponent } from './skills/skills.component';
 import { AccordionModule } from 'src/assets/components/accordion/accordion.module';
+import { WorkComponent } from './work/work.component';
+import { ContactComponent } from './contact/contact.component';
+import { BlogComponent } from './blog/blog.component';
 
 
 @NgModule({
   declarations: [
     PagesComponent,
     SidebarComponent,
-    SkillsComponent
+    SkillsComponent,
+    WorkComponent,
+    ContactComponent,
+    BlogComponent
   ],
   imports: [
     CommonModule,
