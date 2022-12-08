@@ -1,63 +1,26 @@
 @import '/src/styles';
 
+$border-radius: 7px;
+
 .accordion-item-header {
-    padding: 1rem;
-    border: black solid 1px;
-    border-radius: 10px;
-    display: flex;
-    justify-content: space-between;
+  padding: 1rem;
+  border: black solid 1px;
+  border-radius: $border-radius;
+  display: flex;
+  justify-content: space-between;
 }
 
 .accordion-item-header-expanded .accordion-item-header > app-icon img {
-    transform: rotate(180deg);
-    transition: 250ms ease-in;
+  transform: rotate(180deg);
+  transition: 250ms ease-in;
 }
 
 .accordion-item-header-collapsed .accordion-item-header > app-icon img {
-    transition: 250ms ease-out;
+  transition: 250ms ease-out;
 }
 
-.accordion-item-body-wrapper-expanded, .accordion-item-body-wrapper-collapsed {
-    padding: 1rem;
-    border: black solid 1px;
-    margin-bottom: .5rem;
-}
-
-.accordion-item-body-wrapper-expanded {
-    display: block;
-}
-
-.accordion-item-body-wrapper-collapsed {
-    display: none;
-}
-
-@keyframes accordion-open {
-    0% {
-      display: none;
-      transform: translate3d(0, -1rem, 0);
-      opacity: 0;
-    }
-    1% {
-      display: block;
-      transform: translate3d(0, -1rem, 0);
-      opacity: 0;
-    }
-    100% {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-}
-
-@keyframes accordion-close {
-    0% {
-      display: block;
-      opacity: 1;
-    }
-    99% {
-      display: none;
-      opacity: 0;
-    }
-    100% {
-      opacity: 0;
-    }
+.accordion-item-body-wrapper {
+  border: black solid 1px;
+  overflow: hidden;
+  margin: 0 $border-radius;
 }

@@ -2,6 +2,6 @@
 
 <ng-content select="app-accordion-item-header"></ng-content>
 
-<div [class]="bodyClass">
+<div class="accordion-item-body-wrapper" [hidden]="collapsed">
     <ng-content select="app-accordion-item-body"></ng-content>
 </div>

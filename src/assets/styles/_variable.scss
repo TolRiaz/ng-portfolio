@@ -1,7 +1,12 @@
 /*     Color     */
 $white: #fff;
+$blue: #00F;
 $main-color-1: #67D5B5;
 $main-color-2: #D7FFF1;
+$main-color-3: #fe5e7f;
+$main-color-4: #ffc2d3;
+$main-dark-color-1: #011627;
+
 // $sub-color-1: ;
 // $sub-color-2: ;
 /*****************/
@@ -11,69 +16,24 @@ $type-1: sans-serif;
 /****************/
 
 /*    Sidebar    */
-$sidebar-width-lg: 250px;
-$sidebar-width-mini: 185px;
-$sidebar-width-icon: 70px;
-$sidebar-icon-menu-width: 200px;
-$sidebar-light-bg: rgba(255, 255, 255, 0.5);
-$sidebar-box-shadow: 0 0 3px 1px #a7a3a3;
+$sidebar-light-profile-bg: rgba(255, 255, 255, 0.5);
+$sidebar-profile-name-color: $main-dark-color-1 !default;
+
 $sidebar-gradient-color-1: $main-color-1;
 $sidebar-gradient-color-2: $main-color-2;
-$sidebar-gradient: linear-gradient(to top, $sidebar-gradient-color-1, $sidebar-gradient-color-2);
-$sidebar-light-menu-color: $white;
-$sidebar-light-submenu-color: $sidebar-light-menu-color;
-$sidebar-light-category-color: rgba(255, 255, 255, 0.7);
-$sidebar-light-menu-icon-color: $sidebar-light-menu-color;
-$sidebar-light-menu-arrow-color: #bfccda;
-$sidebar-profile-name-color: $white !default;
-$sidebar-profile-designation-color: $white !default;
 
+$nav-item-gradient-color-1: $main-color-3;
+$nav-item-gradient-color-2: $main-color-4;
+
+$sidebar-width-lg: 250px;
+
+$sidebar-light-menu-color: $main-dark-color-1;
 $sidebar-light-menu-active-bg: $white;
-$sidebar-light-menu-active-color: $white;
-
-$sidebar-light-menu-hover-bg: darken($sidebar-gradient-color-1, 20%);
+$sidebar-light-menu-active-color: $main-dark-color-1;
+$sidebar-light-menu-hover-bg: linear-gradient(to right, $nav-item-gradient-color-1, $nav-item-gradient-color-2 77%);
 $sidebar-light-menu-hover-color: $white;
-$sidebar-light-submenu-hover-bg: initial;
-$sidebar-light-submenu-hover-color: #000;
-$sidebar-light-submenu-line-color: darken($sidebar-gradient-color-1, 18%);
-$sidebar-navlink-menu-item-hover-color: darken($sidebar-light-menu-color, 5%);
-$sidebar-nav-item-profile-border-color: 1px solid rgba($white, 0.11);
-$sidebar-nav-item-profile-bg: rgba(255, 255, 255, 0.1);
-$sidebar-nav-item-profile-color: $white;
-$sidebar-nav-category-border-color: rgba(255, 255, 255, 0.13);
-$sidebar-nav-item-dot-color: $white;
+$sidebar-gradient: linear-gradient(to top, $sidebar-gradient-color-1, $sidebar-gradient-color-2);
 
-
-$sidebar-dark-bg: #252C46;
-$sidebar-dark-menu-color: #9F9EA3;
-$sidebar-dark-menu-active-bg: lighten($sidebar-dark-bg, 5%);
-$sidebar-dark-menu-active-color: $white;
-$sidebar-dark-menu-hover-bg: $sidebar-dark-menu-active-bg;
-$sidebar-dark-menu-hover-color: $sidebar-dark-menu-color;
-$sidebar-dark-submenu-color: $sidebar-dark-menu-color;
-$sidebar-dark-submenu-hover-bg: initial;
-$sidebar-dark-submenu-hover-color: #000;
-$sidebar-dark-category-color: #999999;
-$sidebar-dark-menu-icon-color: #9F9EA3;
-$sidebar-dark-profile-name-color: #404852;
-$sidebar-dark-profile-title-color: #8d9498;
-$sidebar-menu-font-size: 15px;
-$sidebar-icon-size: 16px;
-$sidebar-menu-padding: 15px 30px 15px 55px;
-$sidebar-menu-padding-rtl: 15px 70px 15px 30px;
-$nav-link-height: 52px;
-$sidebar-submenu-padding: 0 0 0 4rem;
-$sidebar-submenu-font-size: $sidebar-menu-font-size;
-$sidebar-submenu-item-padding: .75rem 1rem;
-$sidebar-icon-font-size: .9375rem;
-$sidebar-arrow-font-size: .625rem;
-$sidebar-profile-bg: transparent;
-$sidebar-profile-padding: 0rem 1.625rem 2.25rem 1.188rem;
-$sidebar-mini-menu-padding: .8125rem 1rem .8125rem 1rem;
-$sidebar-icon-only-menu-padding: .5rem 1.625rem .5rem 1.188rem;
-$sidebar-icon-only-submenu-width: 200px;
-$sidebar-icon-only-collapse-shadow: 0 1px 15px 1px rgba(113, 106, 202, .08);
-$rtl-sidebar-submenu-padding: 0 3.45rem 0 0;
 /*****************/
 
 /*    Navbar    */

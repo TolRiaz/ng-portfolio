@@ -1,8 +1,11 @@
 @import '/src/styles';
 
+$icon-width: 1rem;
+$icon-height: 1rem;
+
 .icon-wrapper {
-    width: 1rem;
-    height: 1rem;
+    width: $icon-width;
+    height: $icon-height;
     text-align: center;
     text-align: -webkit-center;
 }

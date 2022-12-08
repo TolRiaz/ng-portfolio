@@ -2,8 +2,6 @@ import { Component, OnInit, ViewEncapsulation, Input, HostBinding, OnChanges, On
 import { Subject, takeUntil } from 'rxjs';
 import { AccordionComponent } from '../accordion.component';
 
-const CLASS_NAME = "accordion-item-body-wrapper"
-
 @Component({
   selector: 'app-accordion-item',
   templateUrl: './accordion-item.component.html',
@@ -43,18 +41,6 @@ export class AccordionItemComponent implements OnInit, OnChanges, OnDestroy {
    }
    set expanded(val: boolean) {
      this.collapsedValue = !val;
-   }
-
-   /**
-    * Hide item or not
-    */
-   @Input('bodyClass')
-   get bodyClass(): string {
-      if (this.collapsedValue) {
-        return CLASS_NAME + "-collapsed"
-      } else {
-        return CLASS_NAME + "-expanded"
-      }
    }
 
    @Output() collapsedChange = new EventEmitter<boolean>();
