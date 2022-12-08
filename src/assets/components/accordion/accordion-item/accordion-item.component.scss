@@ -1,11 +1,11 @@
 @import '/src/styles';
 
-$border-radius: 7px;
-
 .accordion-item-header {
   padding: 1rem;
-  border: black solid 1px;
-  border-radius: $border-radius;
+  color: white;
+  font-weight: bold;
+  background: linear-gradient(to right, $main-color-3, $main-color-4 );
+  border-radius: $accordion-item-border-radius;
   display: flex;
   justify-content: space-between;
 }
@@ -20,7 +20,18 @@ $border-radius: 7px;
 }
 
 .accordion-item-body-wrapper {
-  border: black solid 1px;
   overflow: hidden;
-  margin: 0 $border-radius;
+  margin: 0 $accordion-item-border-radius;
+
+  border: $main-color-4 solid thin;
+  background-color: white;
+  border-radius: 0 0 $accordion-item-border-radius $accordion-item-border-radius;
+}
+
+.accordion-item-body-wrapper.collapsed {
+  margin-bottom: 0;
+}
+
+.accordion-item-body-wrapper.expanded {
+  margin-bottom: $accordion-body-wrapper-box-bottom-shadow;
 }

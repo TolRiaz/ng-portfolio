@@ -1,1 +1,11 @@
 @import '/src/styles';
+
+.accordion-item-body {
+    margin: calc($accordion-body-wrapper-box-bottom-shadow * 2);
+    background: rgba( 255, 194, 211, 0.25 );
+    box-shadow: 0 $accordion-body-wrapper-box-right-shadow $accordion-body-wrapper-box-bottom-shadow 0 rgba( 254, 94, 127, 0.37 );
+    backdrop-filter: blur( 4px );
+    -webkit-backdrop-filter: blur( 4px );
+    border-radius: 0 0 $accordion-item-border-radius $accordion-item-border-radius;
+    border: 1px solid rgba( 255, 194, 211, 0.18 );
+}

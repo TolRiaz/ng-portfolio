@@ -1,7 +1,7 @@
 FROM node:slim
 
 ENV DIR=/my-portfolio
-ENV PORT=9000
+ENV PORT=9001
 
 WORKDIR ${DIR}
 

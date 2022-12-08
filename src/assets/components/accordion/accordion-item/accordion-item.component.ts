@@ -1,11 +1,33 @@
+import { trigger, state, style, transition, animate } from '@angular/animations';
 import { Component, OnInit, ViewEncapsulation, Input, HostBinding, OnChanges, OnDestroy, SimpleChanges, Host, ChangeDetectorRef, Output, EventEmitter} from '@angular/core';
 import { Subject, takeUntil } from 'rxjs';
 import { AccordionComponent } from '../accordion.component';
+
+const accordionItemBodyTrigger = trigger('accordionItemBody', [
+  state(
+    'collapsed',
+    style({
+      visibility: 'hidden',
+      height: 0,
+      opacity: 0.1,
+    }),
+  ),
+  state(
+    'expanded',
+    style({
+      visibility: 'visible',
+      opacity: 1,
+    }),
+  ),
+  transition('collapsed => expanded', animate('1s ease-in')),
+  transition('expanded => collapsed', animate('1s ease-out')),
+]);
 
 @Component({
   selector: 'app-accordion-item',
   templateUrl: './accordion-item.component.html',
   styleUrls: ['./accordion-item.component.scss'],
+  animations: [accordionItemBodyTrigger],
   encapsulation: ViewEncapsulation.ShadowDom
 })
 export class AccordionItemComponent implements OnInit, OnChanges, OnDestroy {
@@ -42,6 +64,20 @@ export class AccordionItemComponent implements OnInit, OnChanges, OnDestroy {
    set expanded(val: boolean) {
      this.collapsedValue = !val;
    }
+
+  /**
+   * Item is bodyClass (`collapsed` by default)
+   * @type {string}
+   */
+  @Input('bodyClass')
+
+  get bodyClass() : string {
+    if (this.collapsedValue) {
+      return 'collapsed'
+    } else {
+      return 'expanded'
+    }
+  }
 
    @Output() collapsedChange = new EventEmitter<boolean>();
 
