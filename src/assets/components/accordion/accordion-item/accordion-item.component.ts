@@ -19,8 +19,8 @@ const accordionItemBodyTrigger = trigger('accordionItemBody', [
       opacity: 1,
     }),
   ),
-  transition('collapsed => expanded', animate('1s ease-in')),
-  transition('expanded => collapsed', animate('1s ease-out')),
+  transition('collapsed => expanded', animate('500ms ease-in')),
+  transition('expanded => collapsed', animate('500ms ease-out')),
 ]);
 
 @Component({
